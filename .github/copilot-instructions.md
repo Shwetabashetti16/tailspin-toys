@@ -14,6 +14,9 @@ This is a crowdfunding platform for games with a developer theme. The applicatio
 
 ## Code standards
 
+- Add a file-level comment block before imports or any other code explaining the file's purpose.
+- Every exported function must have a TSDoc comment describing its purpose, parameters, and return value.
+
 ### Required Before Each Commit
 
 #### Testing guidelines
@@ -35,8 +38,9 @@ This is a crowdfunding platform for games with a developer theme. The applicatio
 ### Code formatting requirements
 
 - Use TypeScript with explicit types for function parameters and return values, especially in the data layer (`db/`, `src/lib/`)
-- Frontend code (TypeScript, Astro) must pass ESLint checks (`npm run lint`)
-
+- Frontend code (TypeScript, Astro) must pass ESLint checks (`npm run lint`) 
+- Every exported function should have a TSDoc comment describing its purpose, parameters, and return value.
+- Before imports or any code, add a comment block to the file that explains its purpose.
 ### Data Layer Patterns (Drizzle + Node SQLite)
 
 - Define tables in `db/schema.ts`; manage schema changes with drizzle-kit migrations - see `drizzle.instructions.md`
